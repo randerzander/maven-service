@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>MAVEN</name>
+            <displayName>Maven</displayName>
+            <comment>Maven</comment>
+            <version>1.0.0</version>
+            <components>
+                <component>
+                  <name>MAVEN_CLIENT</name>
+                  <displayName>Maven</displayName>
+                  <category>CLIENT</category>
+                  <cardinality>1+</cardinality>
+                  <commandScript>
+                    <script>scripts/client.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>5000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>redhat6</osFamily>
+                <packages>
+                  <package><name>apache-maven</name></package>
+                </packages>
+              </osSpecific>
+            </osSpecifics>
+        </service>
+    </services>
+</metainfo>
