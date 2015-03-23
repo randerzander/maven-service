@@ -26,6 +26,10 @@
                 <packages>
                   <package><name>apache-maven</name></package>
                 </packages>
+                <osFamily>ubuntu12</osFamily>
+                <packages>
+                  <package><name>apache-maven</name></package>
+                </packages>
               </osSpecific>
             </osSpecifics>
         </service>

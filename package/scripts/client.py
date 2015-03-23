@@ -6,7 +6,7 @@ class Client(Script):
     self.configure(env)
 
     # Install EPEL repo for mono-devel
-    if not os.path.exists('/etc/yum.repos.d/epel-apache-maven.repo'):
+    if os.path.exists('/etc/yum.repos.d/') and not os.path.exists('/etc/yum.repos.d/epel-apache-maven.repo'):
       Execute('cp '+params.resources_dir+'epel-apache-maven.repo /etc/yum.repos.d/')
     self.install_packages(env)
 
