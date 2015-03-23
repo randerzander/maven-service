@@ -5,7 +5,7 @@
         <service>
             <name>MAVEN</name>
             <displayName>Maven</displayName>
-            <comment>Maven</comment>
+            <comment>Apache Maven Project Build Tool</comment>
             <version>1.0.0</version>
             <components>
                 <component>
