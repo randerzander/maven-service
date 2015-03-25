@@ -3,6 +3,7 @@ from resource_management import *
 
 class Client(Script):
   def install(self, env):
+    import params
     self.configure(env)
 
     # Install EPEL repo for mono-devel
