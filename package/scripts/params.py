@@ -5,6 +5,6 @@ from resource_management import *
 # server configurations
 config = Script.get_config()
 
-package_dir = '/var/lib/ambari-agent/cache/stacks/HDP/2.2/services/r-stack'
+package_dir = '/var/lib/ambari-agent/cache/stacks/HDP/2.2/services/maven-stack'
 resources_dir = package_dir + '/package/resources/'
 scripts_dir = package_dir + '/package/scripts/'
