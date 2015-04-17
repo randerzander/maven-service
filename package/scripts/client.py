@@ -1,4 +1,5 @@
 import sys, os
+import ambari_helpers as helpers
 from resource_management import *
 
 class Client(Script):
@@ -6,10 +7,11 @@ class Client(Script):
     import params
     self.configure(env)
 
-    # Install EPEL repo for mono-devel
-    if os.path.exists('/etc/yum.repos.d/') and not os.path.exists('/etc/yum.repos.d/epel-apache-maven.repo'):
-      Execute('cp '+params.resources_dir+'epel-apache-maven.repo /etc/yum.repos.d/')
+    # Add repos to yum
+    helpers.add_repos(params.repo_dir, params.os_repo_dir)
     self.install_packages(env)
+
+    for command in params.commands: Execute(command)
 
   def configure(self, env):
     import params
