@@ -5,8 +5,8 @@ An Ambari Stack service package for the Apache Maven java package build tool.
 To deploy, copy the entire directory into your Ambari stacks folder and restart Ambari:
 
 ```
-git clone https://github.com/randerzander/maven-stack
-sudo mv maven-stack /var/lib/ambari-server/resources/stacks/HDP/2.2/services/
+git clone https://github.com/randerzander/maven-service
+sudo mv maven-service /var/lib/ambari-server/resources/stacks/HDP/2.2/services/
 sudo service ambari-server restart
 ```
 
